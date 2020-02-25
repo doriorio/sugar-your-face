@@ -5,56 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-    <link href="./styles/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="./assets/cupcake.ico" type="image/x-icon">
 
-    <script async src='./scripts/form.js'></script>
+    <link href="./styles/style.css" rel="stylesheet">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="./assets/cupcake.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./scripts/jquery.instagramFeed.js"></script>
+    <script src='./scripts/scripts.js'></script>
+    <script src='./scripts/form.js'></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
-        <script defer src="./scripts/jquery.instagramFeed.js"></script>
-        <script defer src='./scripts/scripts.js'></script>
+
+        <script src="./scripts/jquery.instagramFeed.js"></script>
 
 
-    <title>Sugar Your Face [2]</title>
+    <title>Sugar Your Face [DRAFT]</title>
     
 </head>
 
 <body>
-  <section id="nav">
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark">
-    <a class="navbar-brand" href="#">Sugar Your Face Bakery</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#menu">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#socials">Socials</a>
-          </li>
-        </ul>
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#top"> <img src="./assets/cupcake.ico" style="height:1.5rem"> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    </div>
-</nav>
-</section>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#socials">Socials</a>
+              </li>
+            </ul>
+
+        </div>
+    </nav>
 
 
     <div class="parallax">
@@ -62,6 +70,7 @@
         <div id="group1" class="parallax__group">
           <div class="parallax__layer parallax__layer--fore">
             <div class="headtitle">
+              <div id="top"></div>
               <div id="logoImage"></div>
               <h2>A Los Angeles based custom bakery</h2>
               
@@ -107,7 +116,7 @@
                 <div class="paragraph">GINA CONTENT
                 
                 <p>This will be a table of prices.</p>
-              
+              <div id="menu"></div>
                 <table class="table">
                   <tr>
                     <th scope="col">ITEM</th>

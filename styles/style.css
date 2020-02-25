@@ -1,17 +1,9 @@
+
 .navbar {
-  height: 10%;
-  font-size: 1em;
   font-family: 'Open Sans';
+  background-color: 	#080808;
 
-}
 
-
-.nav-link, .nav-link:hover {
-  color: white;
-}
-
-.navbar-toggler {
-  color: white;
 }
 
 
@@ -27,12 +19,18 @@ form input, form button, form textarea {
 
 }
 
+.content {
+  font-size: .75em;
+}
+
+
+
 
 /* Parallax base styles
   --------------------------------------------- */
 
   .parallax {
-    height: 500px; /* fallback for older browsers */
+    height: 400px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -41,7 +39,7 @@ form input, form button, form textarea {
 
   .parallax__group {
     position: relative;
-    height: 500px; /* fallback for older browsers */
+    height: 400px; /* fallback for older browsers */
     height: 100vh;
   }
 
@@ -188,7 +186,7 @@ form input, form button, form textarea {
     top: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
-    font-size: 6em;
+    font-size: 4em;
     text-shadow: 6px 6px pink;
   }
   #group5 .number {
