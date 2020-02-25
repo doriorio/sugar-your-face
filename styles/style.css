@@ -8,6 +8,7 @@
 
 form, form textarea {
   width: 100%;
+  color: black;
 }
 
 form, form button, form textarea  {
