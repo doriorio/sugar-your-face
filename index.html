@@ -224,15 +224,7 @@
                     e.preventDefault()
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form)})
                       .then(response => alert(`We've received your request! Someone will be in contact shortly`))
-                      .then(email.value = '')
-                      .then(firstName.value = '')
-                      .then(lastName.value = '')
-                      .then(notes.value = '')
-                      .then(dateOfEvent.value = '')
-                      .then(itemInterestedIn.value = '')
-                      .then(numPeople.value = '')
-                      .then(phoneNum.value = '')
-
+                      .then(inputs.value = '')
                       .catch(error => console.error('Error!', error.message))
                   })
                 </script>
