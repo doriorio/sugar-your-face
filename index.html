@@ -174,10 +174,34 @@
                   <input name="email" type="email" placeholder="Email" id="email" required>
                   <br>
 
+                  <!-- Date picker -->
+                  <label for="dateOfEvent">Date of Event</label>
+                  <input name="dateOfEvent" type="date" placeholder="Date of Event" id="dateOfEvent" required>
+                  <br>
+
+                  <!-- Turn this into a drop down -->
+                  <label for="itemInterestedIn">Item Interested In</label>
+                  <input name="itemInterestedIn" type="text" placeholder="Item interested In" id="itemInterestedIn" required>
+                  <br>
+
+                  <!-- Turn this into # that only goes up to x amount-->
+                  <label for="numPeople">Number of people</label>
+                  <input name="numPeople" type="number" placeholder="Number of people" id="numPeople" required>
+                  <br>
+
+                  <label for="phoneNum">Your phone number</label>
+                  <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone number in ###-####-##### format" id="phoneNum" required>
+                  <br>
+
                   <label for="notes">Any additional notes?</label>
                   <textarea name="notes" id="notes"></textarea>
                   <br>
+
+
                   <button type="submit">Send</button>
+                
+                
+                
                 </form>
                 <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
                 <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
@@ -190,6 +214,12 @@
                   const firstName = document.getElementById('firstName');
                   const lastName = document.getElementById('lastName');
                   const notes = document.getElementById('notes');
+                  const dateOfEvent = document.getElementById('dateOfEvent');
+                  const itemInterestedIn = document.getElementById('itemInterestedIn');
+                  const numPeople = document.getElementById('numPeople');
+                  const phoneNum = document.getElementById('phoneNum');
+                  const inputs = document.getElementsByTagName('input');
+                  
                   form.addEventListener('submit', e => {
                     e.preventDefault()
                     fetch(scriptURL, { method: 'POST', mode: 'no-cors', body: new FormData(form)})
@@ -198,6 +228,11 @@
                       .then(firstName.value = '')
                       .then(lastName.value = '')
                       .then(notes.value = '')
+                      .then(dateOfEvent.value = '')
+                      .then(itemInterestedIn.value = '')
+                      .then(numPeople.value = '')
+                      .then(phoneNum.value = '')
+
                       .catch(error => console.error('Error!', error.message))
                   })
                 </script>
