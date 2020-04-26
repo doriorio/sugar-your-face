@@ -39,7 +39,7 @@
 <body>
 
     <nav class="navbar fixed-top navbar-expand-md navbar-dark">
-        <a class="navbar-brand" href="#top"> <img src="./assets/cupcake.ico" style="height:1.5rem"> </a>
+        <a class="navbar-brand" href="#top"> <img src="./assets/cupcake.ico" style="height:3rem"> </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -53,6 +53,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#menu">Menu</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="policies.html">Policies</a>
+              </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
@@ -153,7 +156,7 @@
         <div id="group6" class="parallax__group">
           <div class="parallax__layer parallax__layer--fore fotolayer">
             <div class="imgwrapper">
-                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" />
+                <img src="/assets/squarecupcakes.png" />
                 <div>If you need to get ahold of us urgently, call xxx-xxx-xxxx</div>
             </div>
           </div>
@@ -181,7 +184,12 @@
 
                   <!-- Turn this into a drop down -->
                   <label for="itemInterestedIn">Item Interested In</label>
-                  <input name="itemInterestedIn" type="text" placeholder="Item interested In" id="itemInterestedIn" required>
+                  <select name="itemInterestedIn" id="itemInterestedIn" required>
+                  <option value="cakes">Cakes</option>
+                  <option value="cupcakes">Cupcakes</option>
+                  <option value="pies">Pies</option>
+                  <option value="other">Other</option>
+                  </select>
                   <br>
 
                   <!-- Turn this into # that only goes up to x amount-->
