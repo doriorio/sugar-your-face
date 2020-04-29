@@ -289,19 +289,19 @@
                   var container = document.getElementById("insta-feed");
                   var imgURL = data.data[i].media_url;
                   console.log(imgURL);
-                  var div = document.createElement("div");
-                  
-                  div.innerHTML = data.data[i].caption;
-                  div.setAttribute("class", "instapic");
-                  container.appendChild(div);
 
                   var aHref = document.createElement("a");
                   aHref.setAttribute("href",data.data[i].permalink);
-                  div.appendChild(aHref);
+                  container.appendChild(aHref);
 
                   var img = document.createElement("img");
                   img.setAttribute("src", imgURL);
                   aHref.appendChild(img);
+
+                  var div = document.createElement("div");
+                  div.innerHTML = data.data[i].caption;
+                  div.setAttribute("class", "instapic");
+                  img.appendChild(div);
 
 
                 }

@@ -44,8 +44,8 @@ form, form button, form textarea  {
   font-weight: 300;
 }
 
-.instapic > a > img {
-  height: 640px;
+#insta-feed > a > img {
+  height: 320px;
   background-color: red;
 }
 
