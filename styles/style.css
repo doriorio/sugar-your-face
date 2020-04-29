@@ -20,7 +20,7 @@ form, form button, form textarea  {
 
 }
 
-.paragraph {
+.paragraph, #policies {
   font-family: 'Open Sans';
 
 }
@@ -29,7 +29,20 @@ form, form button, form textarea  {
   font-size: .75em;
 }
 
+#navPadding {
+  height: 5%;
+}
 
+#policies {
+  margin: 10%
+
+}
+
+#policies h5 {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-weight: 300;
+}
 
 
 /* Parallax base styles
