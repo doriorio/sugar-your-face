@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
 
-  <link href="./styles/style.css" rel="stylesheet">
+  <link href="./styles/styles.css" rel="stylesheet">
 
 
   <!-- Fonts -->
@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="./assets/cupcake.ico" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script src='./scripts/scripts.js'></script>
+
   <script src='./scripts/form.js'></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
@@ -210,6 +210,7 @@
 
 
           </form>
+          <!-- //get these polyfills and put them in form.js -->
           <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
           <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
           <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
@@ -277,7 +278,7 @@
             var request = new XMLHttpRequest();
             request.open(
               "GET",
-              "https://graph.instagram.com/me/media?fields=id,caption,media_url&access_token=IGQVJWRWJTT1hWMURTRkxOTFFoUlk2WVlaeWp3TzI1QmNDRUdzT0ppdzV0ejFhMXhCeE9KZA0VTRlBETUtSSTZA1ZAzhwZAHo3NFBKRERFbzlCT0laY3RtNUtGdi0zaC02WUFrRW00dk9R",
+              "https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=IGQVJWRWJTT1hWMURTRkxOTFFoUlk2WVlaeWp3TzI1QmNDRUdzT0ppdzV0ejFhMXhCeE9KZA0VTRlBETUtSSTZA1ZAzhwZAHo3NFBKRERFbzlCT0laY3RtNUtGdi0zaC02WUFrRW00dk9R",
               true
             );
             request.onload = function () {
@@ -289,11 +290,20 @@
                   var imgURL = data.data[i].media_url;
                   console.log(imgURL);
                   var div = document.createElement("div");
+                  
+                  div.innerHTML = data.data[i].caption;
                   div.setAttribute("class", "instapic");
                   container.appendChild(div);
+
+                  var aHref = document.createElement("a");
+                  aHref.setAttribute("href",data.data[i].permalink);
+                  div.appendChild(aHref);
+
                   var img = document.createElement("img");
                   img.setAttribute("src", imgURL);
-                  div.appendChild(img);
+                  aHref.appendChild(img);
+
+
                 }
                 console.log(data);
               } else {}
