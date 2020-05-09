@@ -13,14 +13,14 @@ form, form textarea {
   color: black;
 }
 
-form, form button, form textarea  {
+form, form button, form textarea, table  {
   padding: 10px;
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 12px;
 
 }
 
-.paragraph, #policies, .instapic {
+.paragraph, #policies {
   font-family: 'Open Sans';
 
 }
@@ -44,16 +44,20 @@ form, form button, form textarea  {
   font-weight: 300;
 }
 
-#insta-feed > a > img {
-  height: 320px;
-  background-color: red;
+
+
+#insta-feed {
+  /* width: 50%; */
+  display: grid;
+  grid-template-rows:    repeat(3, 200px);
+  grid-template-columns: repeat(3, 30%);
+
+
 }
 
-.instapic {
-  font-size: .5rem;
-  color: black;
+#insta-feed img {
+  margin-bottom: 0;
 }
-
 
 /* Parallax base styles
   --------------------------------------------- */
@@ -109,7 +113,7 @@ form, form button, form textarea  {
 
   body {
     font-size: 100%;   
-    font-family: 'Marck Script', cursive;
+    font-family: 'Kaushan Script', cursive;
 
     text-align: center;
     scroll-behavior: smooth;
@@ -338,6 +342,9 @@ form, form button, form textarea  {
     .content {
     font-size: 90%;
     }
+    .number {
+      font-size: 80%;
+    }
     .fotolayer {
     width: 35%;
     }
@@ -347,6 +354,9 @@ form, form button, form textarea  {
     .content {
     font-size: 90%;
     margin: 1.5em;
+    }
+    .number {
+      font-size: 80%;
     }
     .fotolayer {
     margin: 2em;
