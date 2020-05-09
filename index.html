@@ -267,52 +267,17 @@
 
               <div id="insta-feed" class="instagram_feed"></div>
           </div>
-          <!-- <script>
-            var request = new XMLHttpRequest();
-            request.open(
-              "GET",
-              "https://graph.instagram.com/me/media?fields=id,caption,media_url,permalink&access_token=IGQVJWRWJTT1hWMURTRkxOTFFoUlk2WVlaeWp3TzI1QmNDRUdzT0ppdzV0ejFhMXhCeE9KZA0VTRlBETUtSSTZA1ZAzhwZAHo3NFBKRERFbzlCT0laY3RtNUtGdi0zaC02WUFrRW00dk9R",
-              true
-            );
-            request.onload = function () {
-              if (request.status >= 200 && request.status < 400) {
-                // Success!
-                var data = JSON.parse(request.responseText);
-                for (var i = 0; i < data.data.length; i++) {
-                  var container = document.getElementById("insta-feed");
-                  var imgURL = data.data[i].media_url;
-                  console.log(imgURL);
-
-                  var aHref = document.createElement("a");
-                  aHref.setAttribute("href",data.data[i].permalink);
-                  container.appendChild(aHref);
-
-                  var img = document.createElement("img");
-                  img.setAttribute("src", imgURL);
-                  aHref.appendChild(img);
-
-                  var div = document.createElement("div");
-                  div.innerHTML = data.data[i].caption;
-                  div.setAttribute("class", "instapic");
-                  img.appendChild(div);
-
-
-                }
-                console.log(data);
-              } else {}
-            };
-            request.onerror = function () {
-              //There was a connection error of some sort
-            };
-            request.send();
-           </script> -->
-
+        
 
       </div>
     </div>
 
   </div>
-
+  <footer class="footer">
+  <div class="container">
+    <span class="text-muted">Copyright Sugar Your Face 2020</span>
+  </div>
+</footer>
 </body>
 
 </html>

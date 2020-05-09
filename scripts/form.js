@@ -30,13 +30,18 @@ request.onload = function () {
     
     var img = document.createElement("img");
     img.setAttribute("src", imgURL);
-    // img.setAttribute("width", '100%');
+    img.setAttribute("title", data.data[i].caption);
     img.setAttribute('height', '100%');
     container.appendChild(img);
 
     }
     console.log(data);
-  } else {}
+  } else {
+    // if the request fails, we populate with a link to the IG
+    var aHref = document.createElement("a");
+    aHref.setAttribute("href","https://www.instagram.com/sugaryourface/");
+    container.appendChild(aHref);
+  }
 };
 request.onerror = function () {
   //There was a connection error of some sort
