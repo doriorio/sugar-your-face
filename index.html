@@ -28,12 +28,12 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
-  <title>Sugar Your Face [DRAFT]</title>
+  <title>Sugar Your Face</title>
 
 </head>
 
 <body>
-
+<!-- Nav begin -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark">
     <a class="navbar-brand" href="#top"> <img src="./assets/cupcake.ico" style="height:3rem"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -50,19 +50,19 @@
           <a class="nav-link" href="#menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" target="_blank" href="policies.html">Policies</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#socials">Socials</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" target="_blank" href="policies.html">Policies</a>
+        </li>
       </ul>
 
     </div>
   </nav>
-
+<!-- Nav end -->
 
   <div class="parallax">
 
@@ -71,7 +71,7 @@
         <div class="headtitle">
           <div id="top"></div>
           <div id="logoImage"></div>
-          <h2>A Los Angeles based custom bakery</h2>
+          <h1>A Los Angeles based custom bakery</h1>
 
         </div>
       </div>
@@ -81,9 +81,9 @@
 
     <div id="group2" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore">
-        <img src="https://s22.postimg.cc/y3ll0amgx/driehoeken-01.png" />
+        <!-- <img src="./assets/cupcakebackground.png" /> -->
       </div>
-      <div class="parallax__layer parallax__layer--base">
+      <div class="parallax__layer parallax__layer--base" id="initialDescription">
         <div class="paragraph">
           <p>GINA CONTENT (Maybe like a paragraph or two about the biz? WWhat you make etc. Pictures of you guys?) </p>
 
@@ -98,7 +98,7 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="number">Menu ↓ </div>
       </div>
-      <div class="parallax__layer parallax__layer--back achtergrond"></div>
+      <div class="parallax__layer parallax__layer--back background"></div>
     </div>
     <div id="group4" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore fotolayer">
@@ -109,6 +109,7 @@
             src="https://images.unsplash.com/photo-1572451479139-6a308211d8be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" />
         </div>
       </div>
+      <div id="menu"></div>
       <div class="parallax__layer parallax__layer--base infolayer">
         <div class="content">
 
@@ -116,8 +117,7 @@
           <h3>Menu</h3>
           <div class="paragraph">GINA CONTENT
 
-            <p>This will be a table of prices.</p>
-            <div id="menu"></div>
+            <h4>This will be a table of prices.</h4>
             <table class="table">
               <tr>
                 <th scope="col">ITEM</th>
@@ -149,19 +149,19 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="number">Contact ↓</div>
       </div>
-      <div class="parallax__layer parallax__layer--back achtergrond"></div>
+      <div class="parallax__layer parallax__layer--back background"></div>
     </div>
     <div id="group6" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore fotolayer">
         <div class="imgwrapper">
           <img src="assets/squarecupcakes.png" />
-          <div>If you need to get ahold of us urgently, call xxx-xxx-xxxx</div>
+          <figcaption>If you need to get ahold of us urgently, call GINA CONTENT</figcaption>
         </div>
       </div>
+      <div id="contact"></div>
       <div class="parallax__layer parallax__layer--base infolayer">
         <div class="content">
           <h3>Contact Form</h3>
-          <div id="contact"></div>
           <form name="submit-to-google-sheet">
             <label for="firstName">First Name</label>
             <input name="firstName" type="text" id="firstName" placeholder="First Name">
@@ -182,7 +182,7 @@
 
             <!-- Turn this into a drop down -->
             <label for="itemInterestedIn">Item Interested In</label>
-            <select name="itemInterestedIn" id="itemInterestedIn" required>
+            <select name="itemInterestedIn" class="form-control" id="itemInterestedIn" required>
               <option value="cakes">Cakes</option>
               <option value="cupcakes">Cupcakes</option>
               <option value="pies">Pies</option>
@@ -197,10 +197,10 @@
 
             <label for="phoneNum">Your phone number</label>
             <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="Phone number in ###-####-##### format" id="phoneNum" required>
+              placeholder="###-####-##### format" id="phoneNum" required>
             <br>
 
-            <label for="notes">Any additional notes?</label>
+            <label for="notes">Please give all additional details below</label>
             <textarea name="notes" id="notes"></textarea>
             <br>
 
@@ -236,7 +236,7 @@
                 })
                 .then(response => alert(`We've received your request! Someone will be in contact shortly`))
                 .then(inputs.value = '')
-                .catch(error => console.error('Error!', error.message))
+                .catch(error => alert(`There's been an issue, try again later`))
             })
           </script>
 
@@ -250,20 +250,29 @@
       <div class="parallax__layer parallax__layer--base">
         <div class="number">Socials ↓ </div>
       </div>
-      <div class="parallax__layer parallax__layer--back achtergrond"></div>
+      <div class="parallax__layer parallax__layer--back background"></div>
     </div>
+    <a name="socials"></a>
     <div id="group8" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore fotolayer">
         <div class="imgwrapper">
-          <img
-            src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80" />
+          <img src="./assets/instagram_icon.jpg"/>
+
+        <figcaption>
+          <a href="https://www.instagram.com/sugaryourface/" target="_blank">
+            Instagram
+          </a>
+          ||
+          <a href="https://www.facebook.com/sugaryourface" target="_blank">
+            Facebook
+          </a>
+        </figcaption>
         </div>
       </div>
       <div class="parallax__layer parallax__layer--base infolayer">
         <div class="content">        
-          <h3>Instagram</h3>
+          <h3>Instagram Feed</h3>
           
-          <a name="socials"></a>
 
               <div id="insta-feed" class="instagram_feed"></div>
           </div>
@@ -275,7 +284,7 @@
   </div>
   <footer class="footer">
   <div class="container">
-    <span class="text-muted">Copyright Sugar Your Face 2020</span>
+    <span class="text-muted">Sugar Your Face 2020</span>
   </div>
 </footer>
 </body>
