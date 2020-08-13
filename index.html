@@ -28,6 +28,8 @@
   <link rel="shortcut icon" href="./assets/cupcake.ico" type="image/x-icon">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./scripts/jquery.instagramFeed.min.js"></script>
+
 
   <script src='./scripts/form.js'></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
@@ -39,7 +41,7 @@
 </head>
 
 <body>
-<!-- Nav begin -->
+  <!-- Nav begin -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark">
     <a class="navbar-brand" href="#top"> <img src="./assets/cupcake.ico" style="height:3rem"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -53,7 +55,7 @@
           <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#menu">Menu</a>
+          <a class="nav-link" href="#pricing">Pricing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contact">Contact</a>
@@ -68,7 +70,7 @@
 
     </div>
   </nav>
-<!-- Nav end -->
+  <!-- Nav end -->
 
   <div class="parallax">
 
@@ -102,52 +104,82 @@
 
     <div id="group3" class="parallax__group">
       <div class="parallax__layer parallax__layer--base">
-        <div class="number">Menu ↓ </div>
+        <div class="number">Pricing ↓ </div>
       </div>
       <div class="parallax__layer parallax__layer--back background"></div>
     </div>
     <div id="group4" class="parallax__group">
+      
       <div class="parallax__layer parallax__layer--fore fotolayer">
         <div class="imgwrapper">
-          <img
-            src="./assets/cakeimage.jpg" />
-          <img
-            src="./assets/pieimage.jpg" />
+          <img src="./assets/cakeimage.jpg" />
+          <img src="assets/squarecupcakes.png" />
         </div>
       </div>
-      <div id="menu"></div>
+      <div id="pricing"></div>
       <div class="parallax__layer parallax__layer--base infolayer">
-        <div class="content">
-
-
-          <h3>Menu</h3>
-          <div class="paragraph">GINA CONTENT
-
-            <h4>This will be a table of prices.</h4>
+        <div class="content" id="contentOverride">
+          <h3>Pricing</h3>
+          <div class="paragraph">
+            <h4>The below price list is a guideline and does not reflect the final price of any of our creations. Cake
+              prices vary depending on size, flavor, and designs. For more accurate pricing, please contact us! </h4>
             <table class="table">
               <tr>
-                <th scope="col">ITEM</th>
-                <th scope="col">Description</th>
+                <th scope="col">CAKES</th>
                 <th scope="col">Price</th>
               </tr>
               <tr>
-                <td>An example item</td>
-                <td>Description</td>
-                <td>Price</td>
+                <td>4" (serves 3-5)</td>
+                <td>$25+</td>
               </tr>
               <tr>
-                <td>Another example item</td>
-                <td>Description</td>
-                <td>Price</td>
+                <td>6" (serves 6-8)</td>
+                <td>$45+</td>
+              </tr>
+              <tr>
+                <td>8" (serves 10-14)</td>
+                <td>$65+</td>
+              </tr>
+              <tr>
+                <td>10" (serves 20-25)</td>
+                <td>$95+</td>
+              </tr>
+
+              <tr>
+                <th scope="col">CUPCAKES</th>
+                <th scope="col">Price</th>
+              </tr>
+              <tr>
+                <td>Mini</td>
+                <td>$20+/dozen</td>
+              </tr>
+              <tr>
+                <td>Standard</td>
+                <td>$35+/dozen</td>
+              </tr>
+              <tr>
+                <th scope="col">OTHER DESSERTS</th>
+                <th scope="col">Price</th>
+              </tr>
+              <tr>
+                <td>9" Pie</td>
+                <td>$35+</td>
+              </tr>
+              <tr>
+                <td>9" Cheesecake</td>
+                <td>$35+</td>
               </tr>
 
             </table>
+
           </div>
 
 
         </div>
       </div>
     </div>
+
+
 
     <!-- NUMBER 2 -->
 
@@ -202,8 +234,8 @@
             <br>
 
             <label for="phoneNum">Your phone number</label>
-            <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              placeholder="###-####-##### format" id="phoneNum" required>
+            <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-####-##### format"
+              id="phoneNum" required>
             <br>
 
             <label for="notes">Please give all additional details below</label>
@@ -211,7 +243,7 @@
             <br>
 
 
-            <button type="submit">Send</button>
+            <button class="btn btn-info btn-small" type="submit">Send</button>
 
 
 
@@ -223,14 +255,6 @@
             const scriptURL =
               'https://script.google.com/macros/s/AKfycbxb0S75A9RBGBR23ns40P4tdwTuYxlpyF6kZKl2GQzNlHphwqUz/exec'
             const form = document.forms['submit-to-google-sheet']
-            const email = document.getElementById('email');
-            const firstName = document.getElementById('firstName');
-            const lastName = document.getElementById('lastName');
-            const notes = document.getElementById('notes');
-            const dateOfEvent = document.getElementById('dateOfEvent');
-            const itemInterestedIn = document.getElementById('itemInterestedIn');
-            const numPeople = document.getElementById('numPeople');
-            const phoneNum = document.getElementById('phoneNum');
             const inputs = document.getElementsByTagName('input');
 
             form.addEventListener('submit', e => {
@@ -262,40 +286,55 @@
     <div id="group8" class="parallax__group">
       <div class="parallax__layer parallax__layer--fore fotolayer">
         <div class="imgwrapper">
-          <img src="./assets/instagram_icon.jpg"/>
+          <img src="./assets/instagram_icon.jpg" />
 
-        <figcaption>
-          <a href="https://www.instagram.com/sugaryourface/" target="_blank">
-            Instagram
-          </a>
-          ||
-          <a href="https://www.facebook.com/sugaryourface" target="_blank">
-            Facebook
-          </a>
-        </figcaption>
+          <figcaption>
+            <a href="https://www.instagram.com/sugaryourface/" target="_blank">
+              Instagram
+            </a>
+            ||
+            <a href="https://www.facebook.com/sugaryourface" target="_blank">
+              Facebook
+            </a>
+          </figcaption>
         </div>
       </div>
       <div class="parallax__layer parallax__layer--base infolayer">
-        <div class="content">        
+        <div class="content" id="socials">
           <h3>Instagram Feed</h3>
-          
 
-              <div id="insta-feed" class="instagram_feed"></div>
-          </div>
-        
+
+          <div id="insta-feed" class="instagram_feed"></div>
+        </div>
+
 
       </div>
     </div>
 
   </div>
   <footer class="footer">
-  <!-- <div class="container"> -->
-    <span class="text-muted">Sugar Your Face 2020</span> 
+    <!-- <div class="container"> -->
+    <span class="text-muted">Sugar Your Face 2020</span>
     &emsp;&emsp;
     <span id="siteCredit"><a href="http://dorisophia.com">Site by DC</span>
     <!-- </div> -->
-  </div>
-</footer>
+    </div>
+  </footer>
+  <script>
+$(window).on('load', function(){
+  $.instagramFeed({
+    'username': 'sugaryourface',
+    'container': "#insta-feed",
+    'display_profile': false,
+    'display_biography': false,
+    'display_igtv': false,
+    'items_per_row': 4,
+    'margin': 0.5,
+    'items': 20
+  });
+});
+
+  </script>
 </body>
 
 </html>
