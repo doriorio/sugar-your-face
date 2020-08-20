@@ -29,15 +29,15 @@ table th[scope=col] {
 }
 
 form, form button, form textarea, table  {
-  padding: 7px;
+  padding: 8%;
   font-family: 'Open Sans';
-  font-size: 0.9em;
+  font-size: 0.9rem;
 
 }
 
-#socials {
-  padding-top: 25%;
-}
+/* #socials {
+  padding-top:15%;
+} */
 
 
 #itemInterestedIn {
@@ -90,7 +90,6 @@ form, form button, form textarea, table  {
   margin: 10px;
 }
 figcaption, figcaption a {
-  font-size: 1em;
   font-family: 'Open Sans';
   color: black;
 }
@@ -300,11 +299,11 @@ figcaption, figcaption a {
   }
   
 
-/* style the groups -> TOP 10 infosecties
+/* groups styling
   --------------------------------------------- */
 
   .fotolayer {
-    width: 40%;
+    width: 35%;
     margin: 3em;
     position: absolute;
     right: 0;
@@ -335,7 +334,7 @@ figcaption, figcaption a {
   }
   
   .content {
-    width: 50%;
+    width: 60%;
     margin: 2em;
     text-align: left;
   }
@@ -361,7 +360,7 @@ figcaption, figcaption a {
   }
   .infolayer p {
     font-size: .5em;
-    line-height: 1.2em;
+    line-height: 1em;
   }
   .infolayer p.info {
     font-weight: bold;
@@ -376,22 +375,17 @@ figcaption, figcaption a {
 /* tablet */
 @media screen and (max-width: 1000px) {
   * {
-    font-size: 16px;
+    font-size: 0.95em;
   }
-    .content {
-    width: 40%;
-    }
+
 
 }
 /* bigger mobile */
 @media screen and (max-width: 750px) {
   * {
-    font-size: 15px;
+    font-size:0.8em;
   }
 
-    .fotolayer {
-    width: 35%;
-    }
     .footer {
       display: none;
     }
@@ -399,8 +393,8 @@ figcaption, figcaption a {
 /* mobile */
 @media screen and (max-width: 650px) {
     .content {
-    font-size: 0%;
-    margin: 1.5em;
+    font-size: 0.6em;
+
     }
 
     .fotolayer {

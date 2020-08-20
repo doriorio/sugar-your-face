@@ -219,12 +219,11 @@
             <br>
 
             <!-- Turn this into a drop down -->
-            <label for="itemInterestedIn">Item Interested In</label>
+            <label for="itemInterestedIn">Interested In</label>
             <select name="itemInterestedIn" class="form-control" id="itemInterestedIn" required>
               <option value="cakes">Cakes</option>
               <option value="cupcakes">Cupcakes</option>
-              <option value="pies">Pies</option>
-              <option value="other">Other</option>
+              <option value="other">Other Desserts</option>
             </select>
             <br>
 
@@ -234,8 +233,7 @@
             <br>
 
             <label for="phoneNum">Your phone number</label>
-            <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-####-##### format"
-              id="phoneNum" required>
+            <input name="phoneNum" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="###-####-##### format" id="phoneNum" required>
             <br>
 
             <label for="notes">Please give all additional details below</label>
@@ -321,16 +319,18 @@
     </div>
   </footer>
   <script>
+    //https://www.jqueryscript.net/social-media/Instagram-Photos-Without-API-instagramFeed.html
 $(window).on('load', function(){
   $.instagramFeed({
     'username': 'sugaryourface',
     'container': "#insta-feed",
     'display_profile': false,
     'display_biography': false,
+    'items': 9,
     'display_igtv': false,
-    'items_per_row': 4,
-    'margin': 0.5,
-    'items': 20
+    'items_per_row': 3,
+    'display_gallery': true
+
   });
 });
 
